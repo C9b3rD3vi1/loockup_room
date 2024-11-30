@@ -160,12 +160,47 @@ We got the www-data Shell from the Metasploit exploit
 Privilege Escalation To User Account →
 
 Remember we found think credentials ? ,
-Now we need to get the password to user think
 
-Let’s Now check for SUID Binaries 
+Now we need to get the password to user ***think***
+
+Let’s Now check for SUID Binaries
 
     find / -perm /4000 2>/dev/null
 
 ![binaries](/binary.gif)
 
+    /usr/sbin/pwn
+
 /usr/sbin/pwn Looks interesting
+
+On execution this binary returns the id value and then tried to grab the File → ***/home/www-data/.passwords**
+
+We have to get to the .passwords file
+
+on the Binary the Path is set to user www-data , if we are able to manipulate the path by changing it to tmp directory → inside /tmp directory we have set the current path to /tmp because /tmp is World-readable and then creating a bash file which impersonates as think user
+
+Let’s Change the Directory to /tmp , and create a bash file which impersonates the user think →
+
+Let’s create a file named id
+
+    echo -e '#!/bin/bash\n echo "uid=33(think) gid=33(think) groups=33(think)"' > id
+
+Don’t forget to CHMOD +x to id file
+
+    chmod +x id
+
+Now Let’s try running → /usr/sbin/pwm now , the SUID will now set the user to think and returns the passwords file
+
+    /usr/sbin/pwm
+
+![found passwords](/passwords.gif)
+
+Find the password to username ***think*** by brute force using ***hydra***
+
+
+I found the password , Let’s login to the User think with the newly discovered password using SSH
+
+
+I Have found the → User Flag
+
+![flag0001](/flag001.png)
