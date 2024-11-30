@@ -16,3 +16,15 @@ Now when i try to browse...I can see a login page displaying!!
 
 ![discovered login page](/login.png)
 
+We have to find Credentials to the Login page @Port 80
+We can do this by couple of ways , by using burp suite or use Hydra to do a Brute-force attack
+
+We will choose the Hydra way since this is a beginner friendly room
+
+Let’s First try using the default credentials like →
+    admin:admin OR admin:password
+
+![Find the credentials](/passloginatt.gif)
+
+Default credentials do not work here
+
