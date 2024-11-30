@@ -116,3 +116,11 @@ Let’s add an entry of → files.lookup.thm to → /etc/hosts
 You can ping files.lookup.thm to check connectivity
 
 ![Now access the host files](/accessscred.gif)
+
+After refreshing the page we find a page with 20 Items
+There are 18 Files with padlock icon which could indicate access restriction
+There are 2 Files without the padlock icon which could mean file could be read
+
+![file access restriction](/fileaccess.webp)
+
+![Access restriction](/file_accessibility.gif)
