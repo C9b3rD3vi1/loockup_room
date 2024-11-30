@@ -110,4 +110,6 @@ After trying to login with the credentials → jose:password123, We are redirect
 
 Let’s add an entry of → files.lookup.thm to → /etc/hosts
 
+![host files](/hostfiles.png)
+
 ![Add a new entry of → files.lookup.thm](/hostfiles.gif)
