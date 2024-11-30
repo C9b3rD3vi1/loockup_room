@@ -99,8 +99,15 @@ Now we will use the Password → ***password123*** to find other username for th
 
     jose:password123
 
+![real credentials](/hydra.png)
+
+
 Let’s now Trying login in with these credentials → jose:password123
 
 ![login credentials redirect](/loginredirect.gif)
 
 After trying to login with the credentials → jose:password123, We are redirected to a new URL → files.lookup.thm
+
+Let’s add an entry of → files.lookup.thm to → /etc/hosts
+
+![Add a new entry of → files.lookup.thm](/hostfiles.gif)
