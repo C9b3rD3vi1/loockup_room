@@ -204,3 +204,6 @@ I found the password , Let’s login to the User think with the newly discovered
 I Have found the → User Flag
 
 ![flag0001](/flag001.png)
+
+## Privilige Escalation To Root
+
