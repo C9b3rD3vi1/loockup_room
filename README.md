@@ -87,3 +87,20 @@ Valid Credentials that were found
 
     admin : password123
 
+Let’s Try to login using the just Found Credentials
+
+After trying to login to the above found credentials , we still were not able to login to the page , which could mean that we need to find other username for the login page
+
+Now we will use the Password → ***password123*** to find other username for the login page
+
+    hydra -L /usr/share/seclists/Usernames/Names/names.txt -p password123 lookup.thm http-post-form "/login.php:username=^USER^&password=^PASS^:F=try again"
+
+![real credentials](/realcredentials.gif)
+
+    jose:password123
+
+Let’s now Trying login in with these credentials → jose:password123
+
+![login credentials redirect](/loginredirect.gif)
+
+After trying to login with the credentials → jose:password123, We are redirected to a new URL → files.lookup.thm
