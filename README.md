@@ -28,3 +28,9 @@ Let’s First try using the default credentials like →
 
 Default credentials do not work here
 
+    Wrong password. Please try again.
+    Redirecting in 3 seconds.
+
+The Form action uses login.php →
+
+![php login function](/loginphp.png)
