@@ -146,3 +146,26 @@ Let’s Find the Vulnerability of elFinder using Searchsploit on CLI
 After Selecting the correct module → use 0 …. Let’s set the options parameter
 
 ![msfconsole](/console.gif)
+
+Exploiting , we get a metasploit shell access
+
+![hacker](/hacked1.png)
+
+Let’s Get the shell of the Meterpreter
+
+![shell](/shell.png)
+
+We got the www-data Shell from the Metasploit exploit
+
+Privilege Escalation To User Account →
+
+Remember we found think credentials ? ,
+Now we need to get the password to user think
+
+Let’s Now check for SUID Binaries 
+
+    find / -perm /4000 2>/dev/null
+
+![binaries](/binary.gif)
+
+/usr/sbin/pwn Looks interesting
