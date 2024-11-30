@@ -123,4 +123,6 @@ There are 2 Files without the padlock icon which could mean file could be read
 
 ![file access restriction](/fileaccess.webp)
 
+Let’s First check the 2 Files without padlock
+
 ![Access restriction](/file_accessibility.gif)
