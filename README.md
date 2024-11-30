@@ -34,3 +34,56 @@ Default credentials do not work here
 The Form action uses login.php →
 
 ![php login function](/loginphp.png)
+
+let user ***hydra*** to brute force authentication with default username as ***admin**
+
+hydra -l admin -P /usr/share/wordlists/rockyou.txt lookup.thm http-post-form "/login.php:username=^USER^&password=^PASS^:Wrong password. Please try again."
+
+hydra:
+
+The main tool for conducting brute-force attacks against login services.
+-l admin:
+
+Specifies the username to test.
+
+In this case, the username is fixed as admin.
+
+    -P /usr/share/wordlists/rockyou.txt:
+
+Specifies the password list to use.
+
+Here, the wordlist is the popular rockyou.txt, commonly used in brute-force attempts.
+
+    ipaddress.com:
+
+The target server’s domain or IP address. Replace this with the actual address of the target.
+
+    http-post-form:
+
+Specifies the service/module to attack. In this case, it’s a web form using the HTTP POST method.
+
+    "/login.php:username=^USER^&password=^PASS^:Wrong Password. Please try again.":
+
+/login.php: The login form's URL endpoint.
+
+username=^USER^&password=^PASS^:
+
+The POST parameters sent to the server.
+^USER^: Placeholder for the username being tested
+(replaced by -l admin).
+
+^PASS^: Placeholder for the password being tested
+(taken from rockyou.txt).
+
+Wrong Password. Please try again.: The failure message from the server. Hydra uses this text to identify incorrect login attempts.
+
+Hydra sends HTTP POST requests to /login.php, replacing ^USER^ with admin and ^PASS^ with each password from the rockyou.txt wordlist.
+
+If the response does not contain Wrong Password. Please try again., Hydra assumes the credentials are valid.
+
+Valid Credentials that were found
+
+![credentials found](/credentials.png)
+
+    admin : password123
+
