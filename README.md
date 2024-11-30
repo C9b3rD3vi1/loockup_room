@@ -132,3 +132,7 @@ Under the file credentials we found → think:nopassword
 Can this be the Credentials for SSH login ?
 
 ![ssh login restriction](/ssh.gif)
+
+Web File Manager is Running on → elFinder Version 2.1.47
+
+![software version](/elfinder.gif)
