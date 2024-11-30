@@ -135,7 +135,7 @@ Can this be the Credentials for SSH login ?
 
 Web File Manager is Running on → elFinder Version 2.1.47
 
-![software version](/.gif)
+![software version](/elfinder.gif)
 
 ![software version](/efinder.webp)
 
