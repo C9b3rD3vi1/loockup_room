@@ -130,3 +130,5 @@ Let’s First check the 2 Files without padlock
 Under the file credentials we found → think:nopassword
 
 Can this be the Credentials for SSH login ?
+
+![ssh login restriction](/ssh.gif)
