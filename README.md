@@ -126,3 +126,7 @@ There are 2 Files without the padlock icon which could mean file could be read
 Let’s First check the 2 Files without padlock
 
 ![Access restriction](/file_accessibility.gif)
+
+Under the file credentials we found → think:nopassword
+
+Can this be the Credentials for SSH login ?
