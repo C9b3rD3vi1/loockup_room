@@ -135,4 +135,9 @@ Can this be the Credentials for SSH login ?
 
 Web File Manager is Running on → elFinder Version 2.1.47
 
-![software version](/elfinder.gif)
+![software version](/.gif)
+
+![software version](/efinder.webp)
+
+Let’s Find the Vulnerability of elFinder using Searchsploit on CLI
+
